@@ -10,9 +10,7 @@ public class ItemGenerator : MonoBehaviour {
     private int goalPos = 120;
     private float PosRange = 3.4f;
     private GameObject unitychan;
-    private GameObject Car;
-    private GameObject Cone;
-    private GameObject Coin;
+ 
     // Use this for initialization
     void Start () {
         this.unitychan = GameObject.Find("unitychan");
@@ -47,26 +45,13 @@ public class ItemGenerator : MonoBehaviour {
             }
             
         }
-        this.Car = GameObject.Find("CarPrefab(Clone)");
-        this.Cone=GameObject.Find("TrafficConePrefab(Clone)");
-        this.Coin = GameObject.Find("CoinPrefab(Clone)");
+        
 	}
 	
 	// Update is called once per frame
         void Update()
         {
-            if (this.unitychan.transform.position.z - this.Car.transform.position.z >= 10)
-            {
-                Destroy(this.Car);
-            }
-            if (this.unitychan.transform.position.z - this.Cone.transform.position.z >= 10)
-            {
-                Destroy(this.Cone);
-            }
-            if (this.unitychan.transform.position.z - this.Coin.transform.position.z == 10)
-            {
-                Destroy(this.Coin);
-            }
+           
 
 
         }
